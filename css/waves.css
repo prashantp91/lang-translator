@@ -97,6 +97,15 @@ h1 {
   .content {
     height: 30vh;
   }
+  #info p {
+    font-size: 14px;
+  }
+  .inner-header {
+	  height: 90vh;
+	  width: 100%;
+	  margin: 0;
+	  padding: 50px;
+  }
   h1 {
     letter-spacing: 2px;
   	font-size: 40px;
@@ -107,6 +116,6 @@ h1 {
   }
   
   .content p {
-	font-size: 20px;
+	font-size: 14px;
   }
 }

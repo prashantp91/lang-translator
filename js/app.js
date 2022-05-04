@@ -245,10 +245,23 @@ function translate(inputText) {
 
 function textToSpeech(text){
     let utterance = new SpeechSynthesisUtterance(text);
+	var country = targetLang.split('-')[1];
+	var voiceFlag = false;
+	var defaultVoice;
     for(let voice of synth.getVoices()){
-        if(voice.name === 'Google हिन्दी'){
-            utterance.voice = voice;
-        }
+		if(voice.lang.includes(country)) {
+			utterance.voice = voice;
+			voiceFlag = true;
+		} else if(voice.name === 'Google US English'){
+            defaultVoice = voice;
+        }	
+        // if(voice.name === 'Google हिन्दी'){
+            // utterance.voice = voice;
+        // }
     }
+	
+	if(!voiceFlag) {
+		utterance.voice = defaultVoice;
+	}	
     synth.speak(utterance);
 }
