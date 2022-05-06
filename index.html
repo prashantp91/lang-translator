@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1">
-<title>Web Speech API</title>
+<title>Voice Language Translator</title>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 <link rel="stylesheet"
@@ -18,23 +18,25 @@
 		<div class="inner-header flex">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-offset-2 col-md-offset-2 col-lg-8 col-md-8 col-sm-12" style="padding-bottom: 30px;">
-						<h3>Language Translator</h1>
-						<p>Using Web Speech API</p>
+					<div class="col-lg-offset-2 col-md-offset-2 col-lg-8 col-md-8 col-sm-12" style="padding-bottom: 20px;">
+						<h3>Voice Language Translator</h1>
+						<!-- <p>Using Web Speech API</p> -->
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-offset-2 col-md-offset-2 col-lg-4 col-md-4 col-sm-6" style="padding-bottom: 20px;">
+					<div class="col-lg-offset-2 col-md-offset-2 col-lg-4 col-md-4 col-sm-6" style="padding-bottom: 10px;">
 						<p>Source Language</p>
 						<select id="source_language" class="form-control" onchange="updateSourceCountry()"></select>
-						<br>
-						<select class="form-control" id="source_dialect"></select>
+						<div style="padding-top:10px;">
+							<select class="form-control" id="source_dialect"></select>
+						</div>
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-6">
-						<p>Trarget Language</p>
+						<p>Target Language</p>
 						<select id="target_language" class="form-control" onchange="updateTargetCountry()"></select>
-						<br>
-						<select class="form-control" id="target_dialect"></select>
+						<div style="padding-top:10px; padding-bottom:10px;">
+							<select class="form-control" id="target_dialect"></select>
+						</div>
 					</div>
 				</div>
 				<div class="row">
